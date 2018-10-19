@@ -64,7 +64,7 @@ namespace Crypto {
   }
 
   inline void cn_slow_hash_v2(const void *data, size_t length, Hash &hash) {
-    cn_slow_hash(data, length, reinterpret_cast<char *>(&hash), 0, 2, 0);
+    cn_slow_hash(data, length, reinterpret_cast<char *>(&hash), 0, 2, 0, CN_MEMORY, CN_ITER);
   }
 
   inline void cn_lite_slow_hash_v0(const void *data, size_t length, Hash &hash) {
@@ -76,7 +76,7 @@ namespace Crypto {
   }
 
   inline void cn_lite_slow_hash_v2(const void *data, size_t length, Hash &hash) {
-    cn_slow_hash(data, length, reinterpret_cast<char *>(&hash), 1, 2, 0);
+    cn_slow_hash(data, length, reinterpret_cast<char *>(&hash), 1, 2, 0, CN_LITE_MEMORY, CN_LITE_ITER);
   }
 
   inline void cn_soft_shell_slow_hash_v0(const void *data, size_t length, Hash &hash, uint32_t height) {
