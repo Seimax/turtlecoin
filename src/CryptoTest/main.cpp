@@ -42,7 +42,7 @@ int main(int argc, char** argv) {
       cxxopts::value<bool>(o_help)
         ->implicit_value("true"))
 
-    ("version",                       "Output daemon version information",
+    ("version",                       "Output software version information",
       cxxopts::value<bool>(o_version)
         ->default_value("false")
         ->implicit_value("true"))
